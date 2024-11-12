@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FizzBuzz Game</title>
+    <style>
+        p {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 24px;
+            font-weight: 800;
+            color: black;
+            margin-bottom: 16px;
+        }
+    </style>
+</head>
+<body>
+    <p id="fizzbuzzResult"></p>
+
+    <script>
+
+        let answer = parseInt(prompt("Please enter the number you would like to FizzBuzz up to:"));
+
+        for (let i = 1; i <= answer; i++) {
+            if ((i % 3 === 0) && (i % 5 === 0)) {
+                fizzbuzzResult.innerHTML += '<span style="color: green;">FizzBuzz</span><br>';
+            } else if (i % 3 === 0) {
+                fizzbuzzResult.innerHTML += '<span style="color: blue;">Fizz</span><br>';
+            } else if (i % 5 === 0) {
+                fizzbuzzResult.innerHTML += `<span style="color: red;">Buzz</span><br>`;
+            } else {
+                fizzbuzzResult.innerHTML += i + "<br>";
+            }
+        }
+
+    </script>
+</body>
+</html>
